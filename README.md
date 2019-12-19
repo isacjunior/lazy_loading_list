@@ -20,7 +20,7 @@ import 'package:lazy_loading_list/lazy_loading_list.dart';
 ## Usage
 
 ```dart
-ListView.separated(
+ListView.builder(
     controller: controller,
     itemCount: items.length,
     itemBuilder: (context, index) {
