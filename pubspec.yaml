@@ -1,5 +1,5 @@
 name: lazy_loading_list
-description: A new Flutter package project.
+description: Lazy loading Widget to load more items by index item to incresent you list like infinite scroll.
 version: 0.0.1
 author:
 homepage:
