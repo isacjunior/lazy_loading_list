@@ -1,14 +1,25 @@
 import 'package:flutter/widgets.dart';
 import 'package:lazy_loading_list/src/mixin_microtask.dart';
 
-class LazyLoadingListView extends StatefulWidget {
+/// Widget to loading more itens in your list.
+class LazyLoadingList extends StatefulWidget {
+  /// Function to incresent more itens in your items.
   final Function loadMore;
+
+  /// Child to build.
   final Widget child;
+
+  /// Index of items.
   final int index;
+
+  /// Boolean value to control if has more itens to fetch.
   final bool hasMore;
+
+  /// This value is initial value of size the items builded in the first build.
   final int initialSizeOfItems;
 
-  const LazyLoadingListView({
+  /// Constructor of Widget
+  const LazyLoadingList({
     Key key,
     @required this.loadMore,
     @required this.child,
@@ -18,11 +29,11 @@ class LazyLoadingListView extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  LazyLoadingListViewState createState() => LazyLoadingListViewState();
+  _LazyLoadingListState createState() => _LazyLoadingListState();
 }
 
-class LazyLoadingListViewState extends State<LazyLoadingListView>
-    with MicroTaskMixin<LazyLoadingListView> {
+class _LazyLoadingListState extends State<LazyLoadingList>
+    with MicroTaskMixin<LazyLoadingList> {
   Future<void> _handleLoadMore() async {
     final itemPosition = widget.index + 1;
     final passedMoreThreshold = itemPosition % widget.initialSizeOfItems == 0;
