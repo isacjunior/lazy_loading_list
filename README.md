@@ -8,7 +8,7 @@ In the pubspec.yaml of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  scroll_to_index: ^0.0.1
+  lazy_loading_list: ^0.0.1
 ```
 
 In your library add the following import:
@@ -22,7 +22,7 @@ import 'package:lazy_loading_list/lazy_loading_list.dart';
 ```dart
 ListView.separated(
     controller: controller,
-    itemCount: list.length,
+    itemCount: items.length,
     itemBuilder: (context, index) {
         return LazyLoadingList(
             index: index,
