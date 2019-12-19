@@ -1,3 +1,7 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Init project.
 
-* TODO: Describe initial release.
+* Create widget to loading by index
+
+## [0.0.4] 
+
+* Update readme to add initialSizeOfItems
