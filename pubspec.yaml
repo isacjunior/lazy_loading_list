@@ -1,6 +1,6 @@
 name: lazy_loading_list
 description: Lazy loading Widget to load more items by index item to incresent you list like infinite scroll.
-version: 0.0.1
+version: 0.0.2
 author: Isac Junior <isacasj91@gmail.com>
 homepage: https://github.com/isacjunior/lazy_loading_list
 
