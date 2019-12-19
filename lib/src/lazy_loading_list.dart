@@ -18,7 +18,8 @@ class LazyLoadingList extends StatefulWidget {
   /// This value is initial value of size the items builded in the first build.
   final int initialSizeOfItems;
 
-  /// Constructor of Widget
+  /// Lazy loading Widget to load more items by the index of the item
+  /// to increment you a list like infinite scroll.
   const LazyLoadingList({
     Key key,
     @required this.loadMore,
