@@ -34,7 +34,9 @@ class LazyLoadingList extends StatefulWidget {
 }
 
 class _LazyLoadingListState extends State<LazyLoadingList>
-    with MicroTaskMixin<LazyLoadingList> {
+    with
+        MicroTaskMixin<LazyLoadingList>,
+        AutomaticKeepAliveClientMixin<LazyLoadingList> {
   Future<void> _handleLoadMore() async {
     final itemPosition = widget.index + 1;
     final passedMoreThreshold = itemPosition % widget.initialSizeOfItems == 0;
@@ -49,7 +51,11 @@ class _LazyLoadingListState extends State<LazyLoadingList>
   }
 
   @override
+  bool get wantKeepAlive => true;
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return widget.child;
   }
 }
