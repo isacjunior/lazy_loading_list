@@ -5,3 +5,7 @@
 ## [0.0.4] 
 
 * Update readme to add initialSizeOfItems
+
+## [1.0.0] 
+
+* Added keep alive mixin
