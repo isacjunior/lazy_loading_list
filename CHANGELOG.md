@@ -9,3 +9,7 @@
 ## [1.0.0] 
 
 * Added keep alive mixin
+
+## [1.0.0+1] 
+
+* Added how to usage in example readme
