@@ -21,11 +21,11 @@ class LazyLoadingList extends StatefulWidget {
   /// Lazy loading Widget to load more items by the index of the item
   /// to increment you a list like infinite scroll.
   const LazyLoadingList({
-    Key key,
-    @required this.loadMore,
-    @required this.child,
-    @required this.index,
-    @required this.hasMore,
+    Key? key,
+    required this.loadMore,
+    required this.child,
+    required this.index,
+    required this.hasMore,
     this.initialSizeOfItems = 10,
   }) : super(key: key);
 
